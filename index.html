@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <title>Bang Jago Site</title>
@@ -9,39 +9,65 @@
       background: #000;
       color: #0f0;
       font-family: 'Courier New', monospace;
+      margin: 0;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
-      overflow: hidden;
     }
 
-    .typewriter {
-      overflow: hidden;
-      border-right: .15em solid #0f0;
-      white-space: nowrap;
-      margin: 0 auto;
-      letter-spacing: .1em;
-      animation:
-        typing 4s steps(30, end),
-        blink-caret 0.75s step-end infinite;
-      font-size: 24px;
-      text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0;
+    .container {
+      text-align: center;
     }
+
+    .line {
+      font-size: 22px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #0f0;
+      margin: 10px 0;
+      width: 0;
+      animation: typing 2s steps(30, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    .line:nth-child(1) { animation-delay: 0s; }
+    .line:nth-child(2) { animation-delay: 2.2s; }
+    .line:nth-child(3) { animation-delay: 4.4s; }
+    .line:nth-child(4) { animation-delay: 6.6s; }
 
     @keyframes typing {
       from { width: 0 }
       to { width: 100% }
     }
 
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: #0f0; }
+    @keyframes blink {
+      0%, 100% { border-color: transparent }
+      50% { border-color: #0f0 }
+    }
+
+    a {
+      color: #0ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-shadow: 0 0 8px #0ff;
     }
   </style>
 </head>
 <body>
-  <div class="typewriter">Welcome to Bang Jago Site</div>
+  <!-- Audio Background -->
+  <audio autoplay loop>
+    <source src="https://media1.vocaroo.com/mp3/1bw8k5uomV1s" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <div class="line">WELCOME TO</div>
+    <div class="line">BANG JAGO SITE</div>
+    <div class="line">TERIMA JASA JOKI GAME SAUSAGE MAN</div>
+    <div class="line">CHAT TELEGRAM <a href="https://t.me/jagokate" target="_blank">@jagokate</a></div>
+  </div>
 </body>
 </html>
