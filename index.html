@@ -57,17 +57,35 @@
   </style>
 </head>
 <body>
-  <!-- Audio Background -->
-  <audio autoplay loop>
+  <!-- Audio element -->
+  <audio id="bg-music" autoplay loop>
     <source src="https://media1.vocaroo.com/mp3/1bw8k5uomV1s" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
 
+  <!-- Konten -->
   <div class="container">
     <div class="line">WELCOME TO</div>
     <div class="line">BANG JAGO SITE</div>
     <div class="line">TERIMA JASA JOKI GAME SAUSAGE MAN</div>
     <div class="line">CHAT TELEGRAM <a href="https://t.me/jagokate" target="_blank">@jagokate</a></div>
   </div>
+
+  <!-- Script paksa autoplay -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('bg-music');
+      audio.volume = 0.5; // Set volume agar tidak dianggap mengganggu
+      const playPromise = audio.play();
+
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          console.log('Autoplay berhasil!');
+        }).catch(error => {
+          console.warn('Autoplay dicegah browser:', error);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
