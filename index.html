@@ -1,78 +1,47 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Saysage Man - Joki & Cheat</title>
+  <meta charset="UTF-8">
+  <title>Bang Jago Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
+      background: #000;
+      color: #0f0;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f0f0;
-      color: #333;
+      overflow: hidden;
     }
-    header {
-      background-color: #ff9800;
-      padding: 20px;
-      color: white;
-      text-align: center;
+
+    .typewriter {
+      overflow: hidden;
+      border-right: .15em solid #0f0;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .1em;
+      animation:
+        typing 4s steps(30, end),
+        blink-caret 0.75s step-end infinite;
+      font-size: 24px;
+      text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0;
     }
-    section {
-      padding: 20px;
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
     }
-    .card {
-      background: white;
-      margin: 15px auto;
-      padding: 20px;
-      max-width: 600px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .card h2 {
-      margin-top: 0;
-    }
-    .wa-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 24px;
-      background: #25d366;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #888;
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #0f0; }
     }
   </style>
 </head>
 <body>
-
-<header>
-  <h1>Jasa Joki & Cheat Sausage Man</h1>
-  <p>Ranking Naik Cepat • Cheat Aman • Terpercaya</p>
-</header>
-
-<section>
-  <div class="card">
-    <h2>Joki Sausage Man</h2>
-    <p>Jasa joki dari Bronze ke Mythic hanya Rp75.000. Main aman dan cepat naik rank!</p>
-    <a class="wa-btn" href="https://wa.me/6281234567890?text=Halo%20admin,%20saya%20mau%20paket%20joki%20Sausage%20Man" target="_blank">Pesan via WhatsApp</a>
-  </div>
-
-  <div class="card">
-    <h2>Cheat Sausage Man</h2>
-    <p>Cheat Aimbot, Wallhack, No Recoil. Aman dan tidak terdeteksi. Support Android & Emulator.</p>
-    <a class="wa-btn" href="https://wa.me/6281234567890?text=Halo%20admin,%20saya%20mau%20beli%20cheat%20Sausage%20Man" target="_blank">Beli via WhatsApp</a>
-  </div>
-</section>
-
-<footer>
-  &copy; 2025 Saysage Man. All Rights Reserved.
-</footer>
-
+  <div class="typewriter">Welcome to Bang Jago Site</div>
 </body>
 </html>
